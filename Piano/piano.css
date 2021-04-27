@@ -4,9 +4,15 @@ body {
     background-size: cover;
 }
 
+header {
+    margin: 0;
+    padding: 0;
+}
+
 #piano-buttons {
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -14,7 +20,8 @@ body {
 
 .piano-button {
     width: 5%;
-    margin: 15px;
+    margin: 0px 15px;
+    overflow: hidden;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 3px solid rgb(58, 33, 33);
@@ -33,4 +40,31 @@ h1 {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 1250px) {
+    header {
+        margin: 30vh;
+    }
+    #piano-buttons {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        margin: 22vh;
+    }
+    #piano-buttons {    
+        height: 56vh;
+    }
+}
+
+@media screen and (max-width: 658px) {
+    header {
+        margin: 20vh;
+    }
+    #piano-buttons {
+        height: 60vh;
+    }
 }
