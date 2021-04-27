@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+    background: linear-gradient(to right, red, blue);
+}
+
+#allStyles {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+
+#over:hover, #enter:hover, #move:hover, #up:hover, #down:hover, #click:hover, #top-btn:hover {
+    transform: scale(1.1,1.1);
+}
+
+#top-btn {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: skyblue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.action-button {
+    width: 200px;
+    height: 230px;
+    margin-bottom: 10%;
+    padding: 20px;
+    background-color: rgb(255, 138, 92);
+}
+
+.actions {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px;
+    background-color: skyblue;
+}
+
+.count {
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgb(255, 204, 109);
+}
+
+@media (max-width: 800px) {
+    #allStyles {
+        width: 80%;
+        margin: auto;
+        grid-template-columns: auto auto;
+    }    
+}
+
+@media (max-width: 650px) {
+    #allStyles {
+        grid-template-columns: auto;
+    }   
+    .action-button {
+        width: 100%;
+    } 
+    .actions {
+        height: 40%;
+        font-size: 45px;
+        font-weight: 600;
+    }
+    .count {
+        height: 20%;
+        font-size: 45px;
+        font-weight: 600;
+    }
+    
+}
