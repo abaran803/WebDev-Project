@@ -1,5 +1,5 @@
 var btn = document.getElementsByTagName("button")[0];
-btn.addEventListener("click",function() {
+function addItem() {
     var list = document.getElementsByTagName("ul")[0];
     var newList = document.createElement("li")
     var div = document.createElement("div")
@@ -15,4 +15,11 @@ btn.addEventListener("click",function() {
         alert("Enter a valid item")
     }
     query.value = "";
+}
+
+btn.addEventListener("click",addItem)
+document.getElementsByTagName("input")[0].addEventListener("keypress",function(e) {
+    if(e.keyCode === 13) {
+        addItem();
+    }
 })
